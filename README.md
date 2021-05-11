@@ -48,13 +48,14 @@ to install the plugins, and you're done setting up.
 At this point, you can move on and make your awesome Rails projcts.
 
 # Usage:
-Run the Rails server (with all bundle installations, database create/migrate/test:prepare/seed etc):
+## Run the Rails server
+(with all bundle installations, database create/migrate/test:prepare/seed etc):
 ````
 cd <your project>
 dbrs
 ````
 
-Run tests:
+## Run tests:
 ````
 cd <your project>
 dbr
@@ -65,7 +66,7 @@ Yes, it recreates the database and migrates again.
 
 Gone are the days when a project with a 3-year-old commit history stops working because the old migrations broke and no one has time to fix them.
 
-Run tests even faster:
+## Run tests even faster:
 ````
 cd <your project>
 r
@@ -74,7 +75,7 @@ Yes, just `r`. `rspec .` is too long.
 
 To some, it sounds funny, but to a person who typed `rspec .` thousands of times this is a relief.
 
-Here are some other aliases:
+## Here are some other aliases:
 ````
 s='git status'
 b='git branch'
