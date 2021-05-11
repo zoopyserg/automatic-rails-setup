@@ -1,4 +1,4 @@
-sudo sed -i '/deb-src/s/^# //' /etc/apt/sources.list && apt update # first enable Sources in your repos (as some of these will be built from source, so they will require build-dep)
+sudo sh -c "sed -i '/deb-src/s/^# //' /etc/apt/sources.list" # enable Source Repos for build-dep)
 
 sudo apt update
 sudo apt upgrade -y
