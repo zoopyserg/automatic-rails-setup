@@ -30,6 +30,7 @@ sudo snap install opera
 
 echo 'Installing rbenv'
 sudo apt -qq install -y rbenv
+rbenv init
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
