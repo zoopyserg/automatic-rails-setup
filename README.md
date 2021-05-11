@@ -1,15 +1,16 @@
 # Rails Setup on fresh Ubuntu 20.04 install
 
-A quick, easy and fully automatic way to get a complete Ruby on Rails Development Environment onto your fresh Ubuntu 20.04 PC.
+A quick, easy, and fully automatic way to get a complete Ruby on Rails Development Environment onto your fresh Ubuntu 20.04 PC.
 
 Have a fresh Ubuntu 20.04 system?
+
 Looking for a way to set it up for Rails?
 
 Launch this script, go grab a coffee, and when you come back it will be done.
 
-Approximate time of execution is about 15 minutes (more or less depending how fast is your CPU).
+The approximate time of execution is about 15 minutes (more or less, depending on how fast is your CPU).
 
-Saves I just saved you 4 hours of tweaksetting up Rails manually.
+Saves you 3-5 hours of setting up Rails manually.
 
 Want to thank me?
 Please support me on Patreon, I'll be happy: (https://www.patreon.com/vinogradoff_group_tip_jar/)[https://www.patreon.com/vinogradoff_group_tip_jar/]
@@ -23,7 +24,7 @@ git fetch origin
 git checkout -b main --track origin/main
 ````
 
-(this will download aliases, vimrc and ubuntu setup script to your $HOME directory)
+(this will download aliases, vimrc, and ubuntu setup script to your $HOME directory)
 
 And then do:
 ````
@@ -51,8 +52,10 @@ cd <your project>
 dbr
 ````
 Launches Bundle Install, (re)creates the database (drop/create/migrate/test:prepare/seed etc.) and runs `rspec .`.
-Yes, it recreates the database, and migrates again.
-Gone are the days when a project with a 3-year-old commit history stops working because the old migrations broke and noone has time to fix them.
+
+Yes, it recreates the database and migrates again.
+
+Gone are the days when a project with a 3-year-old commit history stops working because the old migrations broke and no one has time to fix them.
 
 Run tests even faster:
 ````
@@ -60,7 +63,8 @@ cd <your project>
 r
 ````
 Yes, just `r`. `rspec .` is too long.
-To some it sounds funny, but to a person who typed `rspec .` thousands of times this is a relief.
+
+To some, it sounds funny, but to a person who typed `rspec .` thousands of times this is a relief.
 
 Here are some other aliases:
 ````
@@ -90,10 +94,17 @@ The list is constantly growing.
 
 # But Why VIM? Isn't it too old?
 You know what they say. If it ain't broke, don't fix it.
+
 Plus, I prefer to have an orchestra of small tools that do their small job well.
+
 Rather than depend on bulky IDEs that don't work.
+
 When I am working on a social network I honestly don't have time to wait until Rubymine team fixes a bug or creates an adaptor or something.
+
 I do it myself in VIMscript and move on.
-On that level of programming every second of downtime costs more than Rubymine license.
+
+On that level of programming, every second of downtime costs more than Rubymine license.
+
 I've built many websites using this setup.
+
 Plus VIM is a good tool for developing metaprogramming mindset.
