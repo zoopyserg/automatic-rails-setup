@@ -53,12 +53,12 @@ Obviously, after you `cd <into your project>`,
 ## Run the Rails server
 (with all bundle installations, database create/migrate/test:prepare/seed etc):
 ````bash
-$> dbrs
+> dbrs
 ````
 
 ## Run tests:
 ````bash
-$> dbr
+> dbr
 ````
 Launches Bundle Install, (re)creates the database (drop/create/migrate/test:prepare/seed etc.) and runs `rspec .`.
 
@@ -68,7 +68,7 @@ Gone are the days when a project with a 3-year-old commit history stops working 
 
 ## Run tests even faster:
 ````bash
-$> r
+> r
 ````
 Yes, just `r`. `rspec .` is too long.
 
