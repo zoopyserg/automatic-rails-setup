@@ -3,37 +3,44 @@ sudo sh -c "sed -i '/deb-src/s/^# //' /etc/apt/sources.list" # enable Source Rep
 sudo apt update
 sudo apt upgrade -y
 
-echo 'Vim'
-sudo apt install -y vim vim-gtk
-
-echo 'Git'
+echo 'Installing Git'
 sudo apt install -y git
 git config --global core.editor vim
 
-echo 'rbenv'
+echo 'Installing Vim'
+sudo apt install -y vim vim-gtk
+
+echo 'Setting up vim'
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+echo 'Setting up bashrc'
+echo 'source ~/.bash_aliases.sh' >> ~/.bashrc
+
+echo 'Installing Google Chrome'
+cd ~/Downloads
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+cd
+
+echo 'Installing opera'
+snap install opera # sudo?
+
+echo 'Installing rbenv'
 sudo apt install -y rbenv
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
-echo 'ruby'
+echo 'Installing ruby'
 rbenv install 3.0.1
 rbenv global 3.0.1
 
-echo 'Google Chrome'
-cd ~/Downloads
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-echo 'bundler'
+echo 'Installing bundler'
 gem install bundler
 
-echo 'rails'
+echo 'Installing rails'
 gem install rails
 
-echo 'opera'
-snap install opera
-
-echo 'Imagemagick'
+echo 'Installing Imagemagick'
 sudo apt-get install -y build-essential
 sudo apt-get build-dep imagemagick -y
 cd ~/Downloads
@@ -47,23 +54,16 @@ sudo make install
 sudo ldconfig /usr/local/lib
 cd
 
-## note that I have to compile it with-dependencies or something, so that jpeg convert works
-# redis 
-# i did sudo apt install redis, then compiled from source, then replaced old one with new ones using cp
-echo 'redis'
+# todo: compile latest version from source
+echo 'Installing redis'
 sudo apt install -y redis-server
 
-# 
-echo 'chromedriver'
+echo 'Installing chromedriver'
 cd ~/Downloads
 sudo apt-get install -y unzip
 wget https://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 sudo cp chromedriver /bin/
-
-echo 'vimrc'
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-echo 'source ~/.bash_aliases.sh' >> ~/.bashrc
 
 echo 'postgresql'
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
