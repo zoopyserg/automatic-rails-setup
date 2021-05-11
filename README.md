@@ -33,17 +33,19 @@ sudo chmod +x ubuntusetup.sh
 ````
 (this will run all the installation procedures).
 
-After it's done, just go to Vim and do:
-````
-:BundleInstall
-````
-to install the plugins. And you're good to go.
-
 Note that in the end of the script you will be promped to `Enter a New Password for a New Role` (because it sets up PostgreSQL, and creates a Role which will be same as your username on your system, this is often needed for development).
 
 Once you enter the password, the system will do a little more magic and then it will open `pg_hba.conf` (to let you update login policies for Postgres if you need to).
 
 Once you see `pg_hba.conf` opened in Vim - the script is over, and the installation of Rails environment is completed.
+
+Open Vim and run:
+````
+:BundleInstall
+````
+to install the plugins, and you're done setting up.
+
+At this point, you can move on and make your awesome Rails projcts.
 
 # Usage:
 Run the Rails server (with all bundle installations, database create/migrate/test:prepare/seed etc):
