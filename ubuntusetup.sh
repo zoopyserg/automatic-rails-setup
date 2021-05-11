@@ -23,7 +23,7 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 cd
 
 echo 'Installing opera'
-snap install opera # sudo?
+sudo snap install opera
 
 echo 'Installing rbenv'
 sudo apt install -y rbenv
