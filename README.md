@@ -52,13 +52,13 @@ Obviously, after you `cd <into your project>`,
 
 ## Run the Rails server
 (with all bundle installations, database create/migrate/test:prepare/seed etc):
-````
-dbrs
+````bash
+$> dbrs
 ````
 
 ## Run tests:
-````
-dbr
+````bash
+$> dbr
 ````
 Launches Bundle Install, (re)creates the database (drop/create/migrate/test:prepare/seed etc.) and runs `rspec .`.
 
@@ -67,8 +67,8 @@ Yes, it recreates the database and migrates again.
 Gone are the days when a project with a 3-year-old commit history stops working because the old migrations broke and no one has time to fix them.
 
 ## Run tests even faster:
-````
-r
+````bash
+$> r
 ````
 Yes, just `r`. `rspec .` is too long.
 
