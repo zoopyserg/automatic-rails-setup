@@ -18,7 +18,7 @@ And then do:
 ````
 (this will run all the installations).
 
-Note, this is still in Beta, I will let you know when it's fully functional.
+Note, this installer is still in Beta, I will let you know when it's fully functional.
 This is a rough idea.
 
 Then go to Vim and do:
