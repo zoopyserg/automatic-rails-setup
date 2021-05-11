@@ -91,20 +91,3 @@ off='sudo poweroff'
 
 Check out all aliases in `.aliases.sh` file.
 The list is constantly growing.
-
-# But Why VIM? Isn't it too old?
-You know what they say. If it ain't broke, don't fix it.
-
-Plus, I prefer to have an orchestra of small tools that do their small job well.
-
-Rather than depend on bulky IDEs that don't work.
-
-When I am working on a social network I honestly don't have time to wait until Rubymine team fixes a bug or creates an adaptor or something.
-
-I do it myself in VIMscript and move on.
-
-On that level of programming, every second of downtime costs more than Rubymine license.
-
-I've built many websites using this setup.
-
-Plus VIM is a good tool for developing metaprogramming mindset.
