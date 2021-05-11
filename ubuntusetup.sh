@@ -32,6 +32,7 @@ echo 'Installing rbenv'
 sudo apt -qq install -y rbenv
 rbenv init
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+eval "$(rbenv init -)"
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
 echo 'Installing ruby'
