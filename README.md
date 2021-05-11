@@ -48,16 +48,16 @@ to install the plugins, and you're done setting up.
 At this point, you can move on and make your awesome Rails projcts.
 
 # Usage:
+Obviously, after you `cd <into your project>`,
+
 ## Run the Rails server
 (with all bundle installations, database create/migrate/test:prepare/seed etc):
 ````
-cd <your project>
 dbrs
 ````
 
 ## Run tests:
 ````
-cd <your project>
 dbr
 ````
 Launches Bundle Install, (re)creates the database (drop/create/migrate/test:prepare/seed etc.) and runs `rspec .`.
@@ -68,7 +68,6 @@ Gone are the days when a project with a 3-year-old commit history stops working 
 
 ## Run tests even faster:
 ````
-cd <your project>
 r
 ````
 Yes, just `r`. `rspec .` is too long.
