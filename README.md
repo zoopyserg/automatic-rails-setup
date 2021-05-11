@@ -14,6 +14,7 @@ git checkout -b main --track origin/main
 
 And then do:
 ````
+sudo chmod +x ubuntusetup.sh
 ~/ubuntusetup.sh
 ````
 (this will run all the installations).
