@@ -30,21 +30,6 @@ gem install bundler
 echo 'rails'
 gem install rails
 
-echo 'postgresql'
-sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-sudo apt-get update
-sudo apt-get -y install postgresql postgresql-client-12 postgresql-12 postgresql-contrib libpq-dev postgresql-server-dev-12 pgadmin3
-sudo -u postgres createuser -dlPE $(whoami)
-# Old way of Role creation:
-# sudo su - postgres
-# psql
-# create role myname with createdb login
-# quit
-# exit
-sudo apt install -y mlocate
-sudo vim $(locate pg_hba.conf | grep -v sample) # if I need to config postgres, but I think I don't need because I have the role set up
-
 echo 'opera'
 snap install opera
 
@@ -79,3 +64,18 @@ sudo cp chromedriver /bin/
 echo 'vimrc'
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo 'source ~/.bash_aliases.sh' >> ~/.bashrc
+
+echo 'postgresql'
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get -y install postgresql postgresql-client-12 postgresql-12 postgresql-contrib libpq-dev postgresql-server-dev-12 pgadmin3
+sudo -u postgres createuser -dlPE $(whoami)
+# Old way of Role creation:
+# sudo su - postgres
+# psql
+# create role myname with createdb login
+# quit
+# exit
+sudo apt install -y mlocate
+sudo vim $(locate pg_hba.conf | grep -v sample) # if I need to config postgres, but I think I don't need because I have the role set up
