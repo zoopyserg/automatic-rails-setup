@@ -13,7 +13,7 @@ The approximate time of execution is about 15 minutes (more or less, depending o
 Saves you 3-5 hours of setting up Rails manually.
 
 Want to thank me?
-Please support me on Patreon, I'll be happy: (https://www.patreon.com/vinogradoff_group_tip_jar/)[https://www.patreon.com/vinogradoff_group_tip_jar/]
+Please support me on Patreon, I'll be happy: https://www.patreon.com/vinogradoff_group_tip_jar/
 
 # Setup
 ````
