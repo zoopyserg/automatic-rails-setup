@@ -17,7 +17,7 @@ echo 'Setting up vim'
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 echo 'Setting up bashrc'
-echo 'source ~/.bash_aliases.sh' >> ~/.bashrc
+echo 'source ~/.aliases.sh' >> ~/.bashrc
 
 echo 'Installing Google Chrome'
 cd ~/Downloads
