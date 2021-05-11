@@ -1,7 +1,20 @@
-# Rails Setup on fresh Ubuntu install
+# Rails Setup on fresh Ubuntu 20.04 install
 
-A fast &amp; easy way complete Ruby on Rails Development Environment on a fresh install of Ubuntu (in under 15 minutes)
+A quick, easy and fully automatic way to get a complete Ruby on Rails Development Environment onto your fresh Ubuntu 20.04 PC.
 
+Have a fresh Ubuntu 20.04 system?
+Looking for a way to set it up for Rails?
+
+Launch this script, go grab a coffee, and when you come back it will be done.
+
+Approximate time of execution is about 15 minutes (more or less depending how fast is your CPU).
+
+Saves I just saved you 4 hours of tweaksetting up Rails manually.
+
+Want to thank me?
+Please support me on Patreon, I'll be happy: (https://www.patreon.com/vinogradoff_group_tip_jar/)[https://www.patreon.com/vinogradoff_group_tip_jar/]
+
+# Setup
 ````
 cd
 git init
@@ -10,44 +23,77 @@ git fetch origin
 git checkout -b main --track origin/main
 ````
 
-(this will download aliases, vimrc and ubuntu setup script to the $HOME directory)
+(this will download aliases, vimrc and ubuntu setup script to your $HOME directory)
 
 And then do:
 ````
 sudo chmod +x ubuntusetup.sh
 ~/ubuntusetup.sh
 ````
-(this will run all the installations).
+(this will run all the installation procedures).
 
-Note, this installer is still in Beta, I will let you know when it's fully functional.
-This is a rough idea.
-
-Then go to Vim and do:
+After it's done, just go to Vim and do:
 ````
 :BundleInstall
 ````
-And you're good to go.
+to install the plugins. And you're good to go.
 
 # Usage:
-Run the Rails server:
+Run the Rails server (with all bundle installations, database create/migrate/test:prepare/seed etc):
 ````
 cd <your project>
 dbrs
 ````
-This will launch Bundle Install, (re)create the database (drop/create/migrate/test:prepare/seed etc.) and run the Rails server.
 
 Run tests:
 ````
 cd <your project>
 dbr
 ````
-This will launch Bundle Install, (re)create the database (drop/create/migrate/test:prepare/seed etc.) and run `rspec .`.
+Launches Bundle Install, (re)creates the database (drop/create/migrate/test:prepare/seed etc.) and runs `rspec .`.
+Yes, it recreates the database, and migrates again.
+Gone are the days when a project with a 3-year-old commit history stops working because the old migrations broke and noone has time to fix them.
 
-Check out aliases for more good things you can do with one button press.
+Run tests even faster:
+````
+cd <your project>
+r
+````
+Yes, just `r`. `rspec .` is too long.
+To some it sounds funny, but to a person who typed `rspec .` thousands of times this is a relief.
 
-# Why VIM:
-I prefer to have an orchestra of small tools that do their single job very well.
-Rather than have huge IDEs that crash whenever they want (like Rubymine or whatever).
+Here are some other aliases:
+````
+s='git status'
+b='git branch'
+l='git log'
+a='git add -A'
+c='git commit'
+ca='git commit --amend'
+r='rspec .'
+bu='bundle'
+rs='rails server'
+dbc='rails db:create'
+dbm='rails db:migrate'
+dbt='rails db:test:prepare'
+dbd='rails db:drop'
+dbs='rails db:seed'
+db='dbd && dbc && dbm && dbt && dbs'
+dbr='bu && db && r'
+dbrs='bu && db && rs'
+e='exit'
+off='sudo poweroff'
+````
 
-I've built many websites using this setup, and always worked faster than any Rails programmer I know.
-Check out my Caperoma project for even more Rails optimization.
+Check out all aliases in `.aliases.sh` file.
+The list is constantly growing.
+
+# But Why VIM? Isn't it too old?
+You know what they say. If it ain't broke, don't fix it.
+Plus, I prefer to have an orchestra of small tools that do their small job well.
+Rather than depend on bulky IDEs that don't work.
+When I am working on a social network I honestly don't have time to wait until Rubymine team fixes a bug or creates an adaptor or something.
+I do it myself in VIMscript and move on.
+On that level of programming every second of downtime costs more than Rubymine license.
+I've built many websites using this setup.
+Plus VIM is a good tool for developing metaprogramming mindset.
