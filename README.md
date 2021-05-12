@@ -17,85 +17,35 @@ Please support me on Patreon, I'll be happy: https://www.patreon.com/vinogradoff
 
 # Setup
 ````
-cd
-git init
-git remote add origin https://github.com/zoopyserg/automatic-rails-ubuntu-setup.git
-git fetch origin
-git checkout -b main --track origin/main
-````
-
-(this will download aliases, vimrc, and ubuntu setup script to your $HOME directory)
-
-And then do:
-````
-sudo chmod +x ubuntusetup.sh
-~/ubuntusetup.sh
+wget origin https://github.com/zoopyserg/automatic-rails-ubuntu-setup.git | bash
 ````
 (this will run all the installation procedures).
 
-Note that in the end of the script you will be promped to `Enter a New Password for a New Role` (because it sets up PostgreSQL, and creates a Role which will be same as your username on your system, this is often needed for development).
+# What it does
+Sets up:
+````
+- Source Repos for build-dep
+- Updates
+- Upgrades
+- Git
+- Vim & Vim-GTK
+- Ultrasonic Aliases (my other project)
+- Google Chrome
+- Opera
+- RBenv
+- Latest Ruby (and makes it global)
+- Bundler
+- Latest Rails
+- Imagemagick (from source)
+- Redis Server
+- Chromedriver
+- Postgresql (install & setup)
+````
+
+In the end of the script you will be promped to `Enter a New Password for a New Role` (because it sets up PostgreSQL, and creates a Role which will be same as your username on your current system, this is often needed for development).
 
 Once you enter the password, the system will do a little more magic and then it will open `pg_hba.conf` (to let you update login policies for Postgres if you need to).
 
 Once you see `pg_hba.conf` opened in Vim - the script is over, and the installation of Rails environment is completed.
 
-Open Vim and run:
-````
-:BundleInstall
-````
-to install the plugins, and you're done setting up.
-
 At this point, you can move on and make your awesome Rails projcts.
-
-# Usage:
-Obviously, after you `cd <into your project>`,
-
-## Run the Rails server
-(with all bundle installations, database create/migrate/test:prepare/seed etc):
-````bash
-> dbrs
-````
-
-## Run tests:
-````bash
-> dbr
-````
-Launches Bundle Install, (re)creates the database (drop/create/migrate/test:prepare/seed etc.) and runs `rspec .`.
-
-Yes, it recreates the database and migrates again.
-
-Gone are the days when a project with a 3-year-old commit history stops working because the old migrations broke and no one has time to fix them.
-
-## Run tests even faster:
-````bash
-> r
-````
-Yes, just `r`. `rspec .` is too long.
-
-To some, it sounds funny, but to a person who typed `rspec .` thousands of times this is a relief.
-
-## Here are some other aliases:
-````
-s='git status'
-b='git branch'
-l='git log'
-a='git add -A'
-c='git commit'
-ca='git commit --amend'
-r='rspec .'
-bu='bundle'
-rs='rails server'
-dbc='rails db:create'
-dbm='rails db:migrate'
-dbt='rails db:test:prepare'
-dbd='rails db:drop'
-dbs='rails db:seed'
-db='dbd && dbc && dbm && dbt && dbs'
-dbr='bu && db && r'
-dbrs='bu && db && rs'
-e='exit'
-off='sudo poweroff'
-````
-
-Check out all aliases in `.aliases.sh` file.
-The list is constantly growing.
