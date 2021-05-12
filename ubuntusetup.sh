@@ -8,7 +8,6 @@ sudo apt -qq upgrade -y
 
 echo 'Installing Git'
 sudo apt -qq install -y git
-git config --global core.editor vim
 
 echo 'Installing Vim'
 sudo apt -qq install -y vim vim-gtk
