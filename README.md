@@ -1,4 +1,4 @@
-# Rails Setup on fresh Ubuntu 20.04 install
+# Automatic Rails Setup on fresh Ubuntu 20.04 install
 
 A quick, easy, and fully automatic way to get a complete Ruby on Rails Development Environment onto your fresh Ubuntu 20.04 PC.
 
