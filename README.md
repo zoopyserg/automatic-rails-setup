@@ -28,7 +28,7 @@ Sets up:
 - Upgrades
 - Git
 - Vim & Vim-GTK
-- Ultrasonic Aliases (my other project)
+- Ultrasonic Aliases Rails (my other project)
 - Google Chrome
 - Opera
 - RBenv
