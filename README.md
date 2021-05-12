@@ -23,7 +23,6 @@ curl -fsSL https://github.com/zoopyserg/automatic-rails-setup/raw/main/ubuntuset
 
 # What it does
 Sets up:
-````
 - Source Repos for build-dep
 - Updates
 - Upgrades
@@ -40,7 +39,6 @@ Sets up:
 - Redis Server
 - Chromedriver
 - Postgresql (install & setup)
-````
 
 In the end of the script you will be promped to `Enter a New Password for a New Role` (because it sets up PostgreSQL, and creates a Role which will be same as your username on your current system, this is often needed for development).
 
