@@ -1,6 +1,0 @@
-# First, ignore everything
-*
-# Now, whitelist everything I want to keep
-!.vimrc
-!.aliases.sh
-!.gitignore
