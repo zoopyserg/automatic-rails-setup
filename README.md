@@ -17,7 +17,7 @@ Please support me on Patreon, I'll be happy: https://www.patreon.com/vinogradoff
 
 # Setup
 ````
-wget origin https://github.com/zoopyserg/automatic-rails-ubuntu-setup.git | bash
+curl -fsSL https://github.com/zoopyserg/automatic-rails-setup/raw/main/ubuntusetup.sh | bash
 ````
 (this will run all the installation procedures).
 
