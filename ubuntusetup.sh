@@ -13,11 +13,8 @@ git config --global core.editor vim
 echo 'Installing Vim'
 sudo apt -qq install -y vim vim-gtk
 
-echo 'Setting up vim'
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-echo 'Setting up bashrc'
-echo 'source ~/.aliases.sh' >> ~/.bashrc
+echo 'Setting up Ultrasonic Aliases'
+curl -fsSL https://github.com/zoopyserg/ultrasonic-aliases/raw/main/.setup.sh | bash
 
 echo 'Installing Google Chrome'
 cd ~/Downloads
