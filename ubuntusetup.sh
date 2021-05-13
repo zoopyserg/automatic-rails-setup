@@ -66,6 +66,12 @@ wget https://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux
 unzip chromedriver_linux64.zip
 sudo cp chromedriver /bin/
 
+echo 'Installing Node'
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt -qq install -y gcc g++ make
+sudo apt -qq install -y nodejs
+sudo npm install --global yarn
+
 echo 'postgresql'
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
