@@ -72,6 +72,9 @@ sudo apt -qq install -y gcc g++ make
 sudo apt -qq install -y nodejs
 sudo npm install --global yarn
 
+echo 'Installing GIMP' # more often than not I do need it (to make logos, assets etc.)
+sudo apt -qq install -y gimp
+
 echo 'postgresql'
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
