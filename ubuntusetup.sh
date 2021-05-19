@@ -57,7 +57,9 @@ cd
 
 # todo: compile latest version from source
 echo 'Installing redis'
+sudo add-apt-repository -y ppa:chris-lea/redis-server
 sudo apt -qq install -y redis-server
+sudo apt -qq install -y redis-tools
 
 echo 'Installing chromedriver'
 cd ~/Downloads
