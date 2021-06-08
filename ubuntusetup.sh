@@ -86,6 +86,9 @@ sudo npm install --global yarn
 echo 'Installing GIMP' # more often than not I do need it (to make logos, assets etc.)
 sudo apt -qq install -y gimp
 
+echo 'Installing Sensors'
+sudo apt -qq install -y lm-sensors
+
 echo 'Installing production-related dependencies'
 sudo apt-get install curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev dirmngr gnupg apt-transport-https ca-certificates
 
