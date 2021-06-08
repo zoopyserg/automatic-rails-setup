@@ -38,6 +38,7 @@ Sets up:
 - Imagemagick (from source)
 - Redis Server
 - Chromedriver
+- Sensors (for hardware monitoring)
 - Postgresql (install & setup)
 
 In the end of the script you will be promped to `Enter a New Password for a New Role` (because it sets up PostgreSQL, and creates a Role which will be same as your username on your current system, this is often needed for development).
