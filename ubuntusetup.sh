@@ -96,7 +96,7 @@ echo 'postgresql'
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 sudo apt -qq update
-sudo apt -qq -y install postgresql postgresql-client-12 postgresql-12 postgresql-contrib libpq-dev postgresql-server-dev-12 pgadmin3
+sudo apt -qq -y install postgresql postgresql-client-12 postgresql-12 postgresql-contrib libpq-dev postgresql-server-dev-12
 sudo -u postgres createuser -dlPE $(whoami)
 # Old way of Role creation:
 # sudo su - postgres
