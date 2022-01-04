@@ -88,8 +88,9 @@ sudo apt -qq install -y gimp
 echo 'Installing Sensors'
 sudo apt -qq install -y lm-sensors
 
-echo 'Installing production-related dependencies'
-sudo apt-get install curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev dirmngr gnupg apt-transport-https ca-certificates
+echo 'Installing common production-related dependencies'
+sudo apt -qq install -y curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev dirmngr gnupg apt-transport-https ca-certificates
+sudo apt -qq install -y git libpq-dev wget imagemagick nodejs yarn default-libmysqlclient-dev libmysqlclient-dev mysql-client software-properties-common libcurl4 libcurl4-gnutls-dev locales mc tzdata postgresql-client zip curl pdftk apt-transport-https gpg-agent unzip xvfb libxi6 libgconf-2-4 dirmngr
 
 echo 'Installing Slack'
 sudo snap install slack --classic
