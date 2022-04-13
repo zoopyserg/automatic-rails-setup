@@ -80,7 +80,10 @@ echo 'Installing Node'
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt -qq install -y gcc g++ make
 sudo apt -qq install -y nodejs
-sudo npm install --global yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update
+sudo apt-get install yarn -y
 
 echo 'Installing GIMP' # more often than not I do need it (to make logos, assets etc.)
 sudo apt -qq install -y gimp
