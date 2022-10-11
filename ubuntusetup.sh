@@ -11,6 +11,7 @@ sudo apt -qq install -y git
 
 echo 'Installing Vim'
 sudo apt -qq install -y vim vim-gtk
+sudo apt -qq install -y neovim
 
 echo 'Setting up Ultrasonic Aliases'
 curl -fsSL https://github.com/zoopyserg/ultrasonic-aliases/raw/main/.setup.sh | bash
@@ -72,12 +73,12 @@ sudo apt -qq install -y redis-tools
 echo 'Installing chromedriver'
 cd ~/Downloads
 sudo apt-get install -y unzip
-wget https://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip
+wget https://chromedriver.storage.googleapis.com/107.0.5304.18/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 sudo cp chromedriver /bin/
 
 echo 'Installing Node'
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt -qq install -y gcc g++ make
 sudo apt -qq install -y nodejs
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
