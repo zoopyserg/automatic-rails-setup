@@ -78,7 +78,7 @@ unzip chromedriver_linux64.zip
 sudo cp chromedriver /bin/
 
 echo 'Installing Node'
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt -qq install -y gcc g++ make
 sudo apt -qq install -y nodejs
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
