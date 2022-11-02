@@ -103,6 +103,9 @@ sudo apt -qq install -y git libpq-dev wget imagemagick nodejs yarn default-libmy
 echo 'Installing Slack'
 sudo snap install slack --classic
 
+echo 'Installing XMind'
+sudo snap install xmind
+
 echo 'postgresql'
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
