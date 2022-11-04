@@ -13,6 +13,9 @@ echo 'Installing Vim'
 sudo apt -qq install -y vim vim-gtk
 sudo apt -qq install -y neovim
 
+echo 'Installing libs that allow running Viber, Zoom etc'
+sudo apt -qq install fuse libfuse2 gdebi
+
 echo 'Setting up Ultrasonic Aliases'
 curl -fsSL https://github.com/zoopyserg/ultrasonic-aliases/raw/main/.setup.sh | bash
 
@@ -105,6 +108,15 @@ sudo snap install slack --classic
 
 echo 'Installing XMind'
 sudo snap install xmind
+
+echo 'Installing Zoom'
+cd ~/Downloads
+wget --quiet https://zoom.us/client/5.12.2.4816/zoom_amd64.deb
+sudo dpkg -i zoom*.deb
+
+echo 'Installing Viber'
+cd ~/Downloads
+wget --quiet https://download.cdn.viber.com/desktop/Linux/viber.AppImage
 
 echo 'postgresql'
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
