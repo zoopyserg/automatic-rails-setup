@@ -49,8 +49,8 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 # exec $SHELL
 
 echo 'Installing ruby'
-rbenv install 3.0.1
-rbenv global 3.0.1
+rbenv install 3.1.2
+rbenv global 3.1.2
 
 echo 'Installing bundler'
 gem install bundler
