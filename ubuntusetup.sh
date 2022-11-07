@@ -1,3 +1,4 @@
+# todo: re-design it so that it would check if something is installed before installing it (or remove it before installing) using modprobe or something.
 sudo sh -c "sed -i '/deb-src/s/^# //' /etc/apt/sources.list" # enable Source Repos for build-dep)
 
 echo 'Updating'
