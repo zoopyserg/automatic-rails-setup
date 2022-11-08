@@ -31,7 +31,7 @@ cd
 
 echo 'Installing Sound Cards'
 echo 'pactl set-default-source alsa_input.usb-RODE_Microphones_RODECaster_Pro_00000000001A-01.analog-stereo' >> ~/.bashrc
-echo 'pactl set-default-sink alsa_output.pci-0000_0a_00.1.hdmi-stereo-extra1' >> ~/.bashrc
+echo 'pactl set-default-sink alsa_output.pci-0000_0c_00.4.analog-stereo' >> ~/.bashrc
 
 echo 'Installing opera'
 sudo snap install opera
