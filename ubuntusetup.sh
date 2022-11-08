@@ -135,4 +135,5 @@ sudo -u postgres createuser -dlPE $(whoami)
 # quit
 # exit
 sudo apt -qq install -y mlocate
+sudo updatedb
 sudo vim $(locate pg_hba.conf | grep -v sample) # if I need to config postgres, but I think I don't need because I have the role set up
