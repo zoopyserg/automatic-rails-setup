@@ -7,6 +7,9 @@ sudo apt -qq update
 echo 'Upgrading'
 sudo apt -qq upgrade -y
 
+echo 'Installing System Settings app'
+sudo apt -qq install gnome-control-center
+
 echo 'Installing Git'
 sudo apt -qq install -y git
 
