@@ -37,6 +37,7 @@ echo 'Installing opera'
 sudo snap install opera
 
 echo 'Installing rbenv'
+sudo apt -qq install ruby-rspec-core
 sudo apt -qq install -y rbenv
 rbenv init
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
