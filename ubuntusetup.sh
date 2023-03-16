@@ -12,6 +12,13 @@ sudo apt -qq install gnome-control-center
 
 echo 'Installing Git'
 sudo apt -qq install -y git
+git config --global core.editor vim
+git config --global core.quotepath off
+git config --global user.gpgsign true
+git config --global init.defaultBranch true
+git config --global push.autoSetupRemote true
+git config --global commit.verbose true
+git config --global commit.gpgsign true
 
 echo 'Installing Vim'
 sudo apt -qq install -y vim vim-gtk
