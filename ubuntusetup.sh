@@ -145,3 +145,5 @@ sudo -u postgres createuser -dlPE $(whoami)
 sudo apt -qq install -y mlocate
 sudo updatedb
 sudo vim $(locate pg_hba.conf | grep -v sample) # if I need to config postgres, but I think I don't need because I have the role set up
+
+# https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
